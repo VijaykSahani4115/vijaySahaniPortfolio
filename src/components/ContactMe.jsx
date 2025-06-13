@@ -1,124 +1,112 @@
-import React, { useState, useCallback } from "react";
-import emailjs from "@emailjs/browser";
-import { useSpring, animated } from "react-spring";
-import { toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
-
-// fetch environment variables outside the component or can use useEffect to avoid unnecessary computation during re-rendering
-const serviceId = import.meta.env.VITE_SERVICE;
-const templateId = import.meta.env.VITE_TEMPLATE;
-const apiKey = import.meta.env.VITE_API;
-
-// extract input tag, keep code DRY and avoid repeated style classes
-const InputField = ({ type, name, placeholder, value, onChange }) => (
-  <input
-    type={type}
-    name={name}
-    placeholder={placeholder}
-    className="border border-darkDesert bg-lightDesert text-darkDesert mb-4 p-3 rounded w-full shadow-md focus:border-goldDesert transition-colors duration-200"
-    value={value}
-    onChange={onChange}
-    required
-  />
-);
+import { useSpring, animated, config } from "react-spring";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+} from "react-icons/fa";
+import React, { memo, useState, useEffect } from "react";
+import { SiPerplexity } from "react-icons/si";
 
 export default function ContactMe() {
   const contactSpring = useSpring({
-    from: { opacity: 0, transform: "scale(0.5)" },
+    from: { opacity: 0, transform: "scale(0.95)" },
     to: { opacity: 1, transform: "scale(1)" },
   });
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState("");
+  const contactDetails = [
+    {
+      icon: <FaPhoneAlt />,
+      label: "Phone",
+      value: "+91 89805 32603",
+      href: "tel:+918980532603",
+    },
+    {
+      icon: <FaEnvelope />,
+      label: "Email",
+      value: "vijayksahani.vs@gmail.com",
+      href: "mailto:vijayksahani.vs@gmail.com",
+    },
+    {
+      icon: <FaGithub />,
+      label: "GitHub",
+      value: "github.com/VijaykSahani4115",
+      href: "https://github.com/VijaykSahani4115",
+    },
+    {
+      icon: <FaLinkedin />,
+      label: "LinkedIn",
+      value: "linkedin.com/in/vijay-sahani-5009991b8",
+      href: "https://www.linkedin.com/in/vijay-sahani-5009991b8/",
+    },
+    {
+      icon: <FaInstagram />,
+      label: "Instagram",
+      value: "@vijay_sahani0101",
+      href: "https://www.instagram.com/vijay_sahani0101/",
+    },
+  ];
+  const fadeIn = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: config.slow,
+  });
 
-  // avoid inline functions in render. define functions outside component using useCallback hook
-  const handleNameChange = useCallback((e) => setName(e.target.value), []);
-  const handleEmailChange = useCallback((e) => setEmail(e.target.value), []);
-  const handleMessageChange = useCallback(
-    (e) => setMessage(e.target.value),
-    []
-  );
+  // Springy effect on image hover
+  const [scale, setScale] = useState(1);
+  const springProps = useSpring({
+    transform: `scale(${scale})`,
+    config: config.wobbly,
+  });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // email input validation
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailRegex.test(email)) {
-      setError("Please enter a valid email address.");
-      return;
-    }
-
-    // emailjs logic
-    emailjs.sendForm(serviceId, templateId, e.target, apiKey).then(
-      (result) => {
-        console.log("result text", result.text);
-        setSuccess(true);
-        setName("");
-        setEmail("");
-        setMessage("");
-        toast.success("Your message has been sent successfully!");
-      },
-      (error) => {
-        console.log("error", error.text);
-        setError(
-          "Oops! It seems the JavaScript deities are having a moody day. Fear not, our digital shaman Sara is on it! If you need to bypass the spiritual realm and chat directly, email her at missatrox44@gmail.com"
-        );
-        toast.error("Oops! Something went wrong. Please try again later.");
-      }
-    );
-  };
-
+  // Slide-up effect
+  const slideUp = useSpring({
+    transform: "translate3d(0,0px,0)",
+    from: { transform: "translate3d(0,40px,0)" },
+    delay: 200,
+  });
   return (
     <animated.section
       id="contact-me"
       className="flex flex-col items-center justify-center bg-lightDesert p-8 rounded-lg shadow-md min-h-screen"
       style={contactSpring}
     >
-      <div className="w-full max-w-md">
-        <h1 className="text-4xl font-bold text-darkDesert mb-6 text-center">
-          Contact Me
-        </h1>
-        {success ? (
-          <div>
-            <img src="/thankyou-toast.jpg" alt="Success" class="rounded-3xl" />
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit}>
-            <InputField
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={name}
-              onChange={handleNameChange}
-            />
-            <InputField
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={email}
-              onChange={handleEmailChange}
-            />
-            <textarea
-              name="message"
-              placeholder="Message"
-              className="border border-darkDesert bg-lightDesert text-darkDesert mb-4 p-3 rounded w-full h-24 shadow-md focus:border-goldDesert transition-colors duration-200"
-              value={message}
-              onChange={handleMessageChange}
-              required
-            />
-            <button
-              type="submit"
-              className="bg-darkDesert text-lightDesert py-3 px-4 rounded w-full font-bold hover:bg-goldDesert transition-colors duration-300 shadow-md"
+      <div className="w-full max-w-xl text-center">
+        <h1 className="text-4xl font-bold text-darkDesert mb-8">Contact Me</h1>
+        <animated.div
+          style={fadeIn}
+          id="about"
+          className="container mx-auto flex flex-col items-center justify-center bg-lightDesert mb-10"
+        >
+          <animated.img
+            style={{ ...springProps }}
+            src="images/profile.jpg"
+            alt="Vijay"
+            className="rounded-full w-64 h-64 border-4 border-darkDesert object-cover mb-4 mt-2"
+            onMouseEnter={() => setScale(1.1)}
+            onMouseLeave={() => setScale(1)}
+          />
+        </animated.div>
+        <ul className="space-y-5 text-left">
+          {contactDetails.map((detail, index) => (
+            <li
+              key={index}
+              className="flex items-center space-x-4 text-darkDesert text-lg"
             >
-              Submit
-            </button>
-            {error && <p className="mt-4 text-red-500">{error}</p>}
-          </form>
-        )}
+              <span className="text-2xl text-goldDesert">{detail.icon}</span>
+              <a
+                href={detail.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline break-words"
+              >
+                <span className="font-medium">{detail.label}:</span>{" "}
+                {detail.value}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </animated.section>
   );

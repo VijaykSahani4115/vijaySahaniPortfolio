@@ -1,26 +1,26 @@
 [
   {
     "id": "0",
-    "title": "Full Stack Developer",
-    "company": "Reach Creative",
-    "description": "In my current position, I specialize in the development of components and pages for cutting-edge Next.js web applications. I leverage sophisticated CMS platforms, including Prismic and Sanity, to elevate web development projects, ensuring they are both dynamic and content-rich. My role involves close collaboration with design teams, focusing on the seamless integration of visual concepts with web functionalities. This synergy between design and development guarantees that the final products not only meet but exceed user expectations, providing an intuitive and engaging user experience.",
-    "timePeriod": "January 2024 - Present",
-    "img": "images/reach.jpg"
+    "title": "Senior React/React Native Developer",
+    "company": "Stretosphere IT services",
+    "description": "In my current position, I specialize in the development of components and pages for cutting-edge Reacr.js web applications and React native Mobile Application. I specialize in building dynamic and user-centric mobile applications using React Native. My work involves integrating backend services, APIs, and third-party libraries to create seamless and high-performance mobile experiences. I collaborate closely with UI/UX design teams to translate visual concepts into functional components, ensuring the final app is both intuitive and visually engaging across platforms. This synergy between design and development helps deliver polished, scalable, and impactful mobile solutions.",
+    "timePeriod": "July 2024 - Present",
+    "img": "images/stretosphere.jpeg"
   },
   {
     "id": "1",
-    "title": "Junior Software Developer",
-    "company": "IBG Software",
-    "description": "At IBG Software, I led full-stack development in an Agile environment, focusing on React and React Native applications powered by TypeScript, Node.js, and Express.js. My work significantly enhanced project efficiency and execution. My strategic use of MongoDB and Firebase Firestore boosted backend performance. I redefined user experiences by integrating Firebase Authentication with Redux Saga, improving both security and usability. Through Cypress, I implemented end-to-end testing protocols, ensuring software quality. I developed scalable RESTful APIs to improve system performance and meticulously documented processes on Confluence, enhancing team collaboration. Engaging with stakeholders, I aligned products with business objectives, increasing satisfaction. My management of project tasks via Jira facilitated collaboration and ensured the timely completion of milestones.",
-    "timePeriod": "November 2022 - January 2024",
-    "img": "images/ibg.png"
+    "title": "Senior Software Engineer",
+    "company": "Smarsh Infotech pvt ltd",
+    "description": "At Smarsh Infotech, I led front-end and mobile development initiatives using React.js and React Native in an Agile environment. I built scalable applications using TypeScript, integrated with backend services built on Node.js and Express.js. Leveraging Firebase Firestore and MongoDB, I optimized data handling and performance across platforms. I enhanced user experience and security by integrating Firebase Authentication with Redux Saga. For quality assurance, I implemented end-to-end testing using Cypress. I also developed scalable RESTful APIs and maintained clear technical documentation in Confluence, promoting effective team collaboration. By working closely with stakeholders, I ensured alignment with business goals and improved overall product satisfaction. My task management via Jira helped streamline workflows and ensure on-time delivery of project milestones.",
+    "timePeriod": "November 2022 - July 2024",
+    "img": "images/smarsh_infotech_logo.jpeg"
   },
   {
     "id": "2",
-    "title": "Software Developer",
-    "company": "Chingu",
-    "description": "During Chingu's Voyage 41, our team developed an accessible travel planning app focused on accessibility. In a separate week-long sprint, my partner and I built a Pomodoro Clock application, enhancing collaboration, time management, and React skills through Agile methods.",
-    "timePeriod": "October 2022 - November 2022 & March 2023",
-    "img": "images/chingu.png"
+    "title": "Junior React Native Developer",
+    "company": "Unikwork Systems LLP",
+    "description": "During Unikwork, I collaborated with a remote team to develop an accessibility-focused travel planning application, emphasizing inclusive design and user experience. In a separate week-long sprint, my partner and I built a Pomodoro Clock application, sharpening our collaboration, time management, and React development skills while working within an Agile framework.",
+    "timePeriod": "June 2021 - November 2022",
+    "img": "images/unikwork_logo.jpeg"
   }
 ]

@@ -47,51 +47,45 @@ const About = () => {
       <animated.img
         style={{ ...springProps }}
         src="images/profile.jpg"
-        alt="Sara"
+        alt="Vijay"
         className="rounded-full w-64 h-64 border-4 border-darkDesert object-cover mb-8 mt-20"
         onMouseEnter={() => setScale(1.1)}
         onMouseLeave={() => setScale(1)}
       />
       <animated.div style={slideUp}>
         <h1 className="text-4xl font-bold text-darkDesert mb-4 text-center px-8">
-          Sara Baqla
+          Vijay Sahani
         </h1>
         <p className="text-lg text-darkDesert mb-4 text-center px-8">
-          As a science-loving, code-wielding full-stack web developer, I create user-friendly apps with serious impact. My systematic problem-solving skills were fine-tuned at UT Austin's web development boot camp. I'm resourceful and always staying up to date with the latest trends.
+          As a React Native maestro with 4+ years of crafting seamless mobile
+          experiences, I bridge cutting-edge tech with human-centric design. My
+          code doesn't just function—it delivers gym gains (Gymnago), and powers
+          TV ecosystems (Afasto TV OS), with 7+ live apps on Play Store and App
+          Store. By day, I architect cross-platform solutions with React Native,
+          Firebase, and blockchain tech (Indy SDK/Aries).
         </p>
         <p className="text-lg text-darkDesert mb-4 text-center px-8">
-          But wait, there's more! I'm not just a coding maestro; I also play the trumpet! For two decades, I've performed with various groups across multiple genres, putting a smile on people's faces and a beat in their feet. Some of my heroes? Freddie Hubbard, Clifford Brown, Miles Davis, and Dizzy Gillespie. I've even shared my wisdom as a trumpet tutor, shaping the next generation of brass warriors.
+          By night? A perpetual upskiller who speaks TypeScript fluently and
+          wrestles Kotlin/Swift for native module integrations. My Gold Medalist
+          MCA background fuels my obsession with clean architecture and
+          Jest-tested reliability.
         </p>
         <p className="text-lg text-darkDesert mb-4 text-center px-8">
-          When I'm not jamming or coding, I'm an outdoor enthusiast and bookworm
-          extraordinaire. From hanging out in trees to diving into captivating
-          reads, I seize every moment. My most epic adventures?{" "}
+          Beyond the IDE, I'm a mentor who's trained Builder.ai teams and led
+          developer squads to 40% faster deployments. When offline, you'll find
+          me reverse-engineering app animations for fun or chasing the next
+          breakthrough in wearable tech (yes, I code for Apple Watch too!). My
+          superpower? Turning complex problems into intuitive interfaces—one
+          snackable component at a time.
           <a
             className="text-tealDesert hover:text-goldDesert transition-colors duration-300"
-            href="https://www.fs.usda.gov/recarea/stnf/recarea/?recid=6521"
+            href="https://www.icard.com.sa/en/category/jeem-gym?srsltid=AfmBOopR7O6BYNAQ8k4sbmtcjk0YoKhJ3scN5RwBCiTDAyFXC9D1YJgR"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Trinity Alps Wilderness
+            Jeem gym
           </a>
           ,{" "}
-          <a
-            className="text-tealDesert hover:text-goldDesert transition-colors duration-300"
-            href="https://www.nps.gov/romo/index.htm"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Rocky Mountain National Park
-          </a>
-          , and{" "}
-          <a
-            className="text-tealDesert hover:text-goldDesert transition-colors duration-300"
-            href="https://www.nps.gov/arch/index.htm"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Arches National Park
-          </a>{" "}
           --pure bliss!
         </p>
 
@@ -109,8 +103,7 @@ const About = () => {
             <SiPerplexity size={32} />
           </Anchor> */}
         </div>
-        <div>
-        </div>
+        <div></div>
       </animated.div>
     </animated.div>
   );

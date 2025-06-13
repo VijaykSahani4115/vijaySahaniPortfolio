@@ -8,7 +8,7 @@ import {
   FaBlog,
 } from "react-icons/fa";
 import { SiPerplexity } from "react-icons/si";
-import landingImg from "/logo.svg";
+import landingImg from "/VRS.jpg";
 import {
   GITHUB_URL,
   LINKEDIN_URL,
@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="container mx-auto bg-lightDesert flex flex-col items-center justify-center min-h-screen"
+      className="container mx-auto bg-white flex flex-col items-center justify-center min-h-screen"
     >
       <animated.img
         style={logoSpring}

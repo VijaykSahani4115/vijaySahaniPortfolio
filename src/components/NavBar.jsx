@@ -32,10 +32,10 @@ export default function NavBar() {
             <img
               src="/dev-icon.svg"
               className="mr-3 h-6 sm:h-9"
-              alt="Sara Dev Logo"
+              alt="Vijay Dev Logo"
             />
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              sarabaqla.dev
+             VijaySahani.dev
             </span>
           </Link>
           <div className="flex items-center lg:order-2">

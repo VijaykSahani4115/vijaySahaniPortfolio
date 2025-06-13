@@ -36,14 +36,14 @@ const ProjectModal = ({ project, isOpen, closeModal }) => (
               <FaGithub size={32} />
             </a>
           ) : null}
-          <a
+          {/* <a
             href={project.deployed}
             target="_blank"
             rel="noopener noreferrer"
             className="mx-2 text-darkDesert hover:text-goldDesert transition-colors duration-300"
           >
             <FaExternalLinkAlt size={32} />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

@@ -85,7 +85,7 @@ const Experience = () => {
   return (
     <div
       id="experience"
-      className="bg-lightDesert p-8 rounded-lg shadow-lg w-full mx-auto mt-12"
+      className="bg-lightDesert p-8 rounded-lg shadow-lg w-full mx-auto mt-12 mb-96"
     >
       <h2 className="text-4xl font-bold text-darkDesert mb-4 text-center">
        Developer Experience
@@ -100,19 +100,7 @@ const Experience = () => {
         ))}
       </VerticalTimeline>
 
-      <h2 className="text-4xl font-bold text-darkDesert mt-6 mb-4 text-center">
-        Non Dev Experience
-      </h2>
-      <VerticalTimeline>
-        {nonDevExperiences.map((experience) => (
-          <NonDevExperienceCard
-            key={experience.id}
-            experience={experience}
-            onClick={() => setModalContent(experience)}
-          />
-        ))}
-      </VerticalTimeline>
-
+      
       <Modal
         isOpen={!!modalContent}
         onRequestClose={() => setModalContent(null)}
